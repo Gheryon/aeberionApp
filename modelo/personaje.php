@@ -67,8 +67,7 @@ class Personaje{
         return $this->objetos;
     }
 
-    public function getPersonaje($id)
-    {
+    public function getPersonaje($id){
         $personaje=null;
 
         $sentence=$this->acceso->prepare("SELECT * FROM personaje WHERE id = ?");
@@ -82,11 +81,10 @@ class Personaje{
         return $personaje;
     }
     
-    function editar($id_usuario, $telefono, $residencia, $correo, $sexo, $adicional)
-    {
-        $sql="UPDATE usuario SET telefono_us=:telefono, residencia_us=:residencia, correo_us=:correo, sexo_us=:sexo, adicional_us=:adicional WHERE id_usuario=:id";
+    function editar($id_personaje, $nombre, $apellidos, $descripcion, $personalidad, $deseos, $miedo, $magia, $historia, $religion, $familia, $politica, $retrato, $especie, $sexo){
+        $sql="UPDATE personaje SET Nombre=:nombre, Apellidos=:apellidos, Descripcion=:descripcion, Personalidad=:personalidad, Deseos=:deseos, Miedos=:miedos, Magia=:magia, Historia=:historia, Religion=:religion, Familia=:familia, Politica=:politica, Retrato=:retrato, Especie=:especie, Sexo=:sexo WHERE id=:id_personaje";
         $query=$this->acceso->prepare($sql);
-        $query->execute(array(':id'=>$id_usuario, ':telefono'=>$telefono, ':residencia'=>$residencia, ':correo'=>$correo, ':sexo'=>$sexo, ':adicional'=>$adicional));
+        $query->execute(array(':nombre'=>$nombre, ':apellidos'=>$apellidos, ':descripcion'=>$descripcion, ':personalidad'=>$personalidad, ':deseos'=>$deseos, ':miedos'=>$miedo, ':magia'=>$magia, ':historia'=>$historia, ':religion'=>$religion, ':familia'=>$familia, ':politica'=>$politica, ':retrato'=>$retrato, ':especie'=>$especie, ':sexo'=>$sexo, ':id_personaje'=>$id_personaje));
         
     }
 
