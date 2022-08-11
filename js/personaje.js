@@ -1,8 +1,6 @@
 $(document).ready(function(){
     buscar_personajes();
     var funcion='';
-    //var id_personaje = $('#id_personaje').val();
-    var edit=false;
 
     $('#form-create-personaje').submit(e=>{
         let nombre= $('#Nombre').val();
@@ -139,25 +137,43 @@ $(document).ready(function(){
       e.preventDefault();
     });
 
-    /*$(document).on('click','.editar-personaje', (e)=>{
-      funcion='capturar_datos';
-      edit=true;
-      const elemento=$(this)[0].activeElement.parentElement.parentElement.parentElement.parentElement;
-      console.log(elemento);
-      let id_personaje=$(elemento).attr('personajeId');
-      console.log(id_personaje);
-      //$('#id_personaje').val(id);
-
-      $.post('../controlador/personajeController.php',{funcion, id_personaje}, (response)=>{
-          console.log(response);
-          //const personaje = JSON.parse(response);
-          /*$('#telefono').val(personaje.telefono);
-          $('#residencia').val(personaje.residencia);
-          $('#correo').val(personaje.correo);
-          $('#sexo').val(personaje.sexo);
-          $('#adicional').val(personaje.adicional);*
-      })
-  });*/
+    $('#form-editar-personaje').submit(e=>{
+      let nombre= $('#Nombre').val();
+      let apellidos= $('#Apellidos').val();
+      let descripcion= $('#Descripcion').val();
+      let personalidad= $('#Personalidad').val();
+      let deseos= $('#Deseos').val();
+      let miedos= $('#Miedos').val();
+      let magia= $('#Magia').val();
+      let historia= $('#Historia').val();
+      let religion= $('#Religion').val();
+      let familia= $('#Familia').val();
+      let politica= $('#Politica').val();
+      let retrato= $('#Retrato').val();
+      let especie= $('#inputEspecie').val();
+      let sexo= $('#inputSexo').val();
+      let id_personaje= $('#id_personaje').val();
+      funcion='editar_personaje';
+      $.post('../controlador/personajeController.php',{nombre, apellidos, descripcion, personalidad, deseos, miedos, magia, historia, religion, familia, politica, retrato, especie, sexo, id_personaje, funcion},(response)=>{
+        console.log(response);
+      if(response=='editado'){
+          //mostrar el alert de editado
+          $('#editado').hide('slow');
+          $('#editado').show(1000);
+          $('#editado').hide(3000);
+          //resetear los campos del form
+          $('#form-editar-personaje').trigger('reset');
+      }else{
+        //mostrar el alert de no editado
+        $('#no-editado').hide('slow');
+        $('#no-editado').show(1000);
+        $('#no-editado').hide(3000);
+        //resetea los campos del form
+        $('#form-editar-personaje').trigger('reset');
+      }
+    })
+    e.preventDefault();
+  });
 
     /*buscar_personaje(id_personaje);
     function buscar_personaje(dato) {
@@ -211,42 +227,6 @@ $(document).ready(function(){
           
       })
   }
-    //con $(algo)--> se analiza ese algo, si es document, se analiza todo el documento
-    
-
-    //solo se analiza el #form-personaje cuando se hace submit
-    $('#form-personaje').submit(e=>{
-        if(edit==true){
-            //el id #telefono es el del formulario
-            let telefono=$('#telefono').val();
-            let residencia=$('#residencia').val();
-            let correo=$('#correo').val();
-            let sexo=$('#sexo').val();
-            let adicional=$('#adicional').val();
-            funcion='editar_personaje';
-            $.post('../controlador/personajeController.php', {id_personaje, funcion, telefono, residencia, correo, sexo, adicional},(response)=>{
-            if(response=='editado'){
-                //mostrar el alert de editado
-                $('#editado').hide('slow');
-                $('#editado').show(1000);
-                $('#editado').hide(3000);
-                //resetea los campos de la card
-                $('#form-personaje').trigger('reset');
-            }
-            edit=false;
-            //para actualizar el card "sobre mi"
-            buscar_personaje(id_personaje);
-            })
-        }else{
-            //mostrar el alert de no editado
-            $('#no-editado').hide('slow');
-            $('#no-editado').show(1000);
-            $('#no-editado').hide(3000);
-            //resetea los campos de la card
-            $('#form-personaje').trigger('reset');
-        }
-        e.preventDefault();
-    });
 
     $('#form-avatar').submit(e=>{
         let formData = new FormData($('#form-avatar')[0]);
