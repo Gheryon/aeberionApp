@@ -1,8 +1,7 @@
 <?php
 include_once '../modelo/personaje.php';
 $personaje=new Personaje();
-//$id_usuario=$_SESSION['usuario'];
-//nombre, apellidos, descripcion, personalidad, deseos, miedos, magia, historia, religion, familia, politica, retrato, especie, sexo
+
 if($_POST['funcion']=='crear_nuevo_personaje'){
     $nombre=$_POST['nombre'];
     $apellidos=$_POST['apellidos'];
@@ -25,11 +24,8 @@ if($_POST['funcion']=='crear_nuevo_personaje'){
 
 if($_POST['funcion']=='buscar_personajes'){
     $json=array();
-    //$fecha_actual=new DateTime();
     $personaje->buscar();
     foreach ($personaje->objetos as $objeto) {
-        //$nacimiento=new DateTime($objeto->edad);
-        //$edad=$nacimiento->diff($fecha_actual);
         $json[]=array(
             'id'=>$objeto->id,
             'nombre'=>$objeto->nombre,
@@ -57,7 +53,43 @@ if($_POST['funcion']=='borrar_personaje'){
     $personaje->borrarPersonaje($id_borrado);
 }
 
-if($_POST['funcion']=='capturar_datos'){
+if($_POST['funcion']=='editar_personaje'){
+    $Descripcion=$Personalidad=$Deseos=$Miedos=$Historia=$Religion=$Familia=$Politica=$Retrato=$Especie=$Sexo=null;
+    if(isset($_POST['nombre'])) {
+    $nombre=$_POST['nombre'];}
+    if(isset($_POST['apellidos'])) {
+    $apellidos=$_POST['apellidos'];}
+    if(isset($_POST['descripcion'])) {
+    $descripcion=$_POST['descripcion'];}
+    if(isset($_POST['personalidad'])) {
+    $personalidad=$_POST['personalidad'];}
+    if(isset($_POST['deseos'])) {
+    $deseos=$_POST['deseos'];}
+    if(isset($_POST['miedos'])) {
+    $miedos=$_POST['miedos'];}
+    if(isset($_POST['magia'])) {
+    $magia=$_POST['magia'];}
+    if(isset($_POST['historia'])) {
+    $historia=$_POST['historia'];}
+    if(isset($_POST['religion'])) {
+    $religion=$_POST['religion'];}
+    if(isset($_POST['familia'])) {
+    $familia=$_POST['familia'];}
+    if(isset($_POST['politica'])) {
+    $politica=$_POST['politica'];}
+    if(isset($_POST['retrato'])) {
+    $retrato=$_POST['retrato'];}
+    if(isset($_POST['especie'])) {
+    $especie=$_POST['especie'];}
+    if(isset($_POST['sexo'])) {
+    $sexo=$_POST['sexo'];}
+    if(isset($_POST['id_personaje'])) {
+    $id_personaje=$_POST['id_personaje'];}
+    $personaje->editar($id_personaje, $nombre, $apellidos, $descripcion, $personalidad, $deseos, $miedos, $magia, $historia, $religion, $familia, $politica, $retrato, $especie, $sexo);
+    echo 'editado';
+}
+
+/*if($_POST['funcion']=='capturar_datos'){
     $json=array();
     //$id_personaje=$_POST['id_personaje'];
     //$personaje->obtener_personaje($id_personaje);
@@ -83,7 +115,7 @@ if($_POST['funcion']=='capturar_datos'){
     $jsonstring=json_encode($json[0]);
     echo $jsonstring;
     //echo $_POST['id_personaje']."id";
-}
+}*/
 /*if($_POST['funcion']=='buscar_usuario'){
     $json=array();
     $fecha_actual=new DateTime();
