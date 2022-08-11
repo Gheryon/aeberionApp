@@ -1,6 +1,6 @@
 <?php
 include_once 'conexionDB.php';
-//cada vez que se instancia una variable Usuario, se hace conexion pdo automaticamente
+//cada vez que se instancia una variable Personaje, se hace conexion pdo automaticamente a la base de datos
 class Personaje{
     var $objetos;
     public function __construct()
@@ -9,18 +9,16 @@ class Personaje{
         $this->acceso = $db->pdo;
     }
 
-    function nuevoPersonaje($nombre, $apellidos, $descripcion, $personalidad, $deseos, $miedo, $magia, $historia, $religion, $familia, $politica, $retrato, $especie, $sexo)
-    {
-        //se busca si ya existe el usuario
+    function nuevoPersonaje($nombre, $apellidos, $descripcion, $personalidad, $deseos, $miedo, $magia, $historia, $religion, $familia, $politica, $retrato, $especie, $sexo){
+        //se busca si ya existe el personaje
         $sql="SELECT id FROM personaje WHERE Nombre=:nombre";
         $query=$this->acceso->prepare($sql);
         $query->execute(array(':nombre'=>$nombre));
         $this->objetos=$query->fetchAll();
-        //si ya existe el dni, no se añade el usuario
+        //si ya existe el personaje, no se añade el usuario
         if(!empty($this->objetos)){
             echo "noadd";
         }else{
-            //$sql = "INSERT INTO personaje (Nombre, Apellidos, Descripcion, Personalidad, Deseos, Miedos, Magia, Historia, Religion, Familia, Politica, Retrato, Especie, Sexo) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             $sql="INSERT INTO personaje(Nombre, Apellidos, Descripcion, Personalidad, Deseos, Miedos, Magia, Historia, Religion, Familia, Politica, Retrato, Especie, Sexo) VALUES (:nombre, :apellidos, :descripcion, :personalidad, :deseos, :miedos, :magia, :historia, :religion, :familia, :politica, :retrato, :especie, :sexo);";
             $query=$this->acceso->prepare($sql);
             $query->execute(array(':nombre'=>$nombre, ':apellidos'=>$apellidos, ':descripcion'=>$descripcion, ':personalidad'=>$personalidad, ':deseos'=>$deseos, ':miedos'=>$miedo, ':magia'=>$magia, ':historia'=>$historia, ':religion'=>$religion, ':familia'=>$familia, ':politica'=>$politica, ':retrato'=>$retrato, ':especie'=>$especie, ':sexo'=>$sexo));
@@ -28,9 +26,8 @@ class Personaje{
         }
     }
 
-    function buscar()
-    {
-        //se ha introducido algún caracter a buscar, se devuelven los usuarios que encagen con la consulta
+    function buscar(){
+        //se ha introducido algún caracter a buscar, se devuelven los personajes que encagen con la consulta
         if(!empty($_POST['consulta'])){
             $consulta=$_POST['consulta'];
             $sql="SELECT * FROM personaje WHERE Nombre LIKE :consulta";
@@ -39,7 +36,7 @@ class Personaje{
             $this->objetos=$query->fetchAll();
             return $this->objetos;
         }else{
-            //se devuelven todos los usuarios
+            //se devuelven todos los personajes existentes pues no se introdujo ningún valor a buscar
             $sql="SELECT * FROM personaje WHERE Nombre NOT LIKE '' ORDER BY id LIMIT 25";
             $query=$this->acceso->prepare($sql);
             $query->execute();
