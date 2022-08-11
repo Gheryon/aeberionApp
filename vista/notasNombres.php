@@ -28,7 +28,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-2">
-                    <a href="/Aeberion/index.html" class="btn btn-success">Volver</a></p>
+                    <a href="/Aeberion/index.php" class="btn btn-success">Volver</a></p>
                 </div>
             </div>
             <div class="row justify-content-center">
