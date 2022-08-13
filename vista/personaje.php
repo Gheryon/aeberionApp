@@ -88,7 +88,7 @@
             <div class="col-md-4 centroPersonajes">
                 <div class="row">
                     <div>
-                        <img src="<?php echo $personaje['Retrato'];?>" class="img-fluid" alt="retrato.jpeg">
+                        <img src="<?php echo '../imagenes/Retratos/'.$personaje['Retrato'];?>" class="img-fluid" alt="retrato.jpeg">
                     </div>
                     <div ><label for="Especie" class="form-label">Especie:</label>
                         <?php echo $personaje['Especie']; ?></div>
