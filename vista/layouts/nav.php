@@ -227,29 +227,22 @@
               </p>
             </a>
           </li>
-          <li class="nav-header">OTROS</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="articulos.php" class="nav-link">
               <i class="nav-icon fa-solid fa-pencil"></i>
               <p>
-                Notas
-                <i class="fas fa-angle-left right"></i>
+                Apuntes
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="notasNombres.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Lista de nombres</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Apuntes</p>
-                </a>
-              </li>
-            </ul>
+          </li>
+          <li class="nav-header">OTROS</li>
+          <li class="nav-item">
+            <a href="notasNombres.php" class="nav-link">
+              <i class="nav-icon fa-solid fa-pencil"></i>
+              <p>
+                Lista de nombres
+              </p>
+            </a>
           </li>
           <li class="nav-item">
             <a href="enlaces.php" class="nav-link">
