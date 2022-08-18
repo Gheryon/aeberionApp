@@ -7,7 +7,8 @@ if($_POST['funcion']=='crear')
 {
     $nombre = $_POST['nombre_articulo'];
     $contenido = $_POST['contenido_articulo'];
-    $articulo->crear($nombre, $contenido);
+    $tipo = $_POST['tipo'];
+    $articulo->crear($nombre, $contenido, $tipo);
 }
 
 if($_POST['funcion']=='editar')
@@ -15,7 +16,8 @@ if($_POST['funcion']=='editar')
     $nombre = $_POST['nombre_articulo'];
     $contenido = $_POST['contenido_articulo'];
     $id_editado = $_POST['id_editado'];
-    $articulo->editar($nombre, $contenido, $id_editado);
+    $tipo = $_POST['tipo'];
+    $articulo->editar($nombre, $contenido, $tipo, $id_editado);
 }
 
 if($_POST['funcion']=='buscar')
@@ -26,7 +28,8 @@ if($_POST['funcion']=='buscar')
         $json[]=array(
             'id'=>$objeto->id_articulo,
             'nombre'=>$objeto->nombre,
-            'contenido'=>$objeto->contenido
+            'contenido'=>$objeto->contenido,
+            'tipo'=>$objeto->tipo
         );
     }
     $jsonstring = json_encode($json);
@@ -46,22 +49,6 @@ if($_POST['funcion']=='detalles')
     $jsonstring = json_encode($json[0]);
     echo $jsonstring;
 }
-/*if($_POST['funcion']=='capturar_datos'){
-    $json=array();
-    $id_usuario=$_POST['id_usuario'];
-    $usuario->obtener_datos($id_usuario);
-    foreach ($usuario->objetos as $objeto) {
-        $json[]=array(
-            'telefono'=>$objeto->telefono_us,
-            'residencia'=>$objeto->residencia_us,
-            'correo'=>$objeto->correo_us,
-            'sexo'=>$objeto->sexo_us,
-            'adicional'=>$objeto->adicional_us
-        );
-    }
-    $jsonstring=json_encode($json[0]);
-    echo $jsonstring;
-}*/
 
 if($_POST['funcion']=='borrar'){
     $id=$_POST['id'];
