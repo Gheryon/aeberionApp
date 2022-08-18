@@ -7,34 +7,36 @@
     <?php include_once 'layouts/nav.php';?>
 
 <div class="modal fade" id="confirmar" tabindex="-1" role="dialog" aria-labelledby="confirmar-eliminacion" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="confirmar-eliminacion">Confirmar eliminación</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+      <div class="card card-danger">
+        <div class="card-header">
+          <h3 class="card-title">Confirmar eliminación</h3>
+          <button data-dismiss="modal" aria-label="close" class="close">
             <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">        
-        <div class="alert alert-success text-center" id='confirmado' style='display:none'>
-            <span><i class="fas fa-check m-1"></i>Artículo eliminado</span>
+          </button>
         </div>
-        <div class="alert alert-danger text-center" id='rechazado' style='display:none'>
-            <span><i class="fas fa-times m-1"></i>Artículo rechazada</span>
-        </div>
-        <form id="form-confirmar-borrado">
+        <div class="card-body">
+          <div class="alert alert-success text-center" id='confirmado' style='display:none'>
+              <span><i class="fas fa-check m-1"></i>Artículo eliminado</span>
+          </div>
+          <div class="alert alert-danger text-center" id='rechazado' style='display:none'>
+              <span><i class="fas fa-times m-1"></i>Artículo rechazada</span>
+          </div>
+          <form id="form-borrar-articulo" class=" text-center">
             <div class="input-group mb-3">
                 <div class="input-grup-prepend">
-                    <span class="input-group-text" id="nombre-articul"> ¿Borrar?</span>
+                    <span class="input-group-text"> ¿Borrar artículo <p id="nombre-articulo-borrar"></p>?</span>
                 </div>
                 <input type="hidden" id="id_articulo">
                 <input type="hidden" id="funcion">
             </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn bg-gradient-primary">Eliminar</button>
-        </form>
+        </div>
+        <div class="card-footer text-right">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn bg-gradient-danger">Eliminar</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -70,6 +72,11 @@
             </div>
         </div>
         <div class="card-footer">
+          <select class="form-select" name="tipo" id="tipo-articulo">
+            <option selected disabled value="">Tipo</option>
+            <option>Canon</option>
+            <option>Referencia</option>
+          </select>
           <button type="submit" class="btn bg-gradient-primary float-right m-1">Guardar</button>
           <button type="button" data-dismiss="modal" class="btn btn-outline-secondary float-right m-1">Cerrar</button>
         </form>
@@ -90,7 +97,7 @@
           </button>
         </div>
         <div class="card-body">
-              <label class="mt-2" for="nombre-articulo" id="ver-nombre-articulo">Título artículo</label>
+              <label class="mt-2" for="ver-nombre-articulo" id="ver-nombre-articulo">Título artículo</label>
               <p id="ver-contenido-articulo">Contenido</p>
         </div>
         <div class="card-footer">
@@ -108,7 +115,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-12">
-                        <h1 class="fw-bolder text-center"> Apuntes </h1>
+                        <h1 class="fw-bolder text-center"> Artículos </h1>
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
@@ -127,7 +134,7 @@
                 <div class="card-header">
                     <h3 class="card-title">Búsqueda de artículos</h3>
                     <div class="input-group">
-                        <input type="text" id="buscar" placeholder="Nombre del artículo"class="form-control float-left">
+                        <input type="text" id="buscar-articulo" placeholder="Nombre del artículo"class="form-control float-left">
                         <div class="input-group-append">
                             <button class="btn btn-default">
                                 <i class="fas fa-search"></i>
@@ -135,23 +142,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body p-0 table-responsive">
                   <table class="table table-hover text-nowrap">
                     <thread class="table-success">
                       <tr>
                         <th>Acción</th>
-                        <th>Nombre</th>
+                        <th>Título</th>
+                        <th>Clasificacion</th>
                       </tr>
                     </thread>
-                    <tbody class="table-active" id="laboratorios">
+                    <tbody class="table-active" id="articulos">
 
                     </tbody>
                   </table>
-                  <div class="row">
-                    <div id="articulos" class="row d-flex align-items-stretch">
-
-                    </div>
-                  </div>
                 </div>
                 <div class="card-footer">
 
