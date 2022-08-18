@@ -9,7 +9,7 @@ class Articulo{
         $this->acceso = $db->pdo;
     }
 
-    function crear($nombre, $contenido){
+    function crear($nombre, $contenido, $tipo){
         //se busca si ya existe el articulo
         $sql="SELECT id_articulo FROM articulosgenericos WHERE nombre=:nombre";
         $query=$this->acceso->prepare($sql);
@@ -19,15 +19,14 @@ class Articulo{
         if(!empty($this->objetos)){
             echo 'noadd';
         }else{
-            $sql="INSERT INTO articulosgenericos(nombre, contenido) VALUES (:nombre, :contenido);";
+            $sql="INSERT INTO articulosgenericos(nombre, contenido, tipo) VALUES (:nombre, :contenido, :tipo);";
             $query=$this->acceso->prepare($sql);
-            $query->execute(array(':nombre'=>$nombre, ':contenido'=>$contenido));
+            $query->execute(array(':nombre'=>$nombre, ':contenido'=>$contenido, ':tipo'=>$tipo));
             echo 'add';
         }
     }
 
-    function buscar()
-    {
+    function buscar(){
         //se ha introducido algún caracter a buscar, se devuelven los articulos que encagen con la consulta
         if(!empty($_POST['consulta'])){
             $consulta=$_POST['consulta'];
@@ -46,7 +45,7 @@ class Articulo{
         }
     }
     function borrar($id){
-        $sql="DELETE FROM laboratorio WHERE id_Laboratorio=:id";
+        $sql="DELETE FROM articulosgenericos WHERE id_articulo=:id";
         $query=$this->acceso->prepare($sql);
         $query->execute(array(':id'=>$id));
         if(!empty($query->execute(array(':id'=>$id)))){
@@ -56,10 +55,10 @@ class Articulo{
         }
     }
 
-    function editar($nombre, $id_editado){
-        $sql="UPDATE laboratorio SET nombre=:nombre WHERE id_Laboratorio=:id";
+    function editar($nombre, $contenido, $tipo, $id_editado){
+        $sql="UPDATE articulosgenericos SET nombre=:nombre, contenido=:contenido, tipo=:tipo WHERE id_articulo=:id";
         $query=$this->acceso->prepare($sql);
-        $query->execute(array(':nombre'=>$nombre, ':id'=>$id_editado));
+        $query->execute(array(':nombre'=>$nombre, ':contenido'=>$contenido, ':tipo'=>$tipo, ':id'=>$id_editado));
         echo 'edit';
     }
 
