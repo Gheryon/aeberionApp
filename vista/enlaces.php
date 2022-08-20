@@ -74,13 +74,12 @@
         <p><a href=https://www.ternascodearagon.es/wp-content/uploads/2018/12/albarracin-el-pueblo-mas-bonito-de-espana-1200.jpg>Albarracín--->Capital Cantón Rojo</a></p>
         <p><a href=https://viajes.nationalgeographic.com.es/a/25-pueblos-medievales-mas-bellos-espana_9631>Pueblos Españoles</a></p>
         <p><a href=https://hipertextual.com/2008/07/ciudades-que-se-ubican-sobre-increibles-precipicios>Pueblos con barrancos</a></p>
+        <p><a href=https://es.wikipedia.org/wiki/Castillo_de_Burgalimar>Castillo Burgalimar</a></p>
       </div>
     </div>
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-    
-    <a href="/Aeberion/index.html" class="btn btn-success">Volver</a>
   </body>
 <?php include_once "layouts/footer.php";?>
