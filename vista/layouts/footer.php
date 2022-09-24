@@ -21,5 +21,7 @@
 <script src="../js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../js/demo.js"></script>
+<!-- menu -->
+<script src="../js/menu.js"></script>
 </body>
 </html>
