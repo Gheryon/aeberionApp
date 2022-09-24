@@ -5,5 +5,5 @@ $iconoPathEdit="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 
 //listas
 $listaTimelines=array("Universal", "Cantones", "De los Dioses", "Del Profeta");
 $listaPaises=array("Cantones", "Belegron", "Alharia", "Desconocido");
-$tiposInstituciones=array("Cantón", "Tribu", "República", "Reino", "Orden militar", "Orden de magia", "Imperio", "Ducado", "Gran ducado");
+$tiposInstituciones=array("Cantón", "Tribu", "República", "Reino", "Orden militar", "Orden de magia", "Imperio", "Ducado", "Gran ducado", "Casa Nobiliaria", "Ciudad-estado", "Condado", "Marquesado");
 ?>
