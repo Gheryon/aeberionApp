@@ -4,7 +4,6 @@ $(document).ready(function(){
     function rellenar_menu_especies() {
         funcion="menu_especies";
         $.post('../controlador/especiesController.php', {funcion}, (response)=>{
-            console.log(response);
             const especies= JSON.parse(response);
             let template='';
             especies.forEach(especie => {
