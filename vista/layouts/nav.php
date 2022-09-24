@@ -154,54 +154,21 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Belegrones</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dragones</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Elfos</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Enanos</p>
-                </a>
-              </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Gamusinos</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Gnomos</p>
-                </a>
-              </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Humanos</p>
-                </a>
-              </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Semielfos</p>
-                </a>
-              </li>
+              <a href="createEspecie.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Nueva especie</p>
+              </a>
+            </li>
+            <div class="div" id="menu_especies"></div>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a href="cronicas.php" class="nav-link">
+              <i class="nav-icon fa-solid fa-book-open"></i>
+              <p>
+                Crónicas
+              </p>
+            </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -227,6 +194,7 @@
               </p>
             </a>
           </li>
+          <li class="nav-header">OTROS</li>
           <li class="nav-item">
             <a href="articulos.php" class="nav-link">
               <i class="nav-icon fa-solid fa-pencil"></i>
@@ -235,7 +203,6 @@
               </p>
             </a>
           </li>
-          <li class="nav-header">OTROS</li>
           <li class="nav-item">
             <a href="notasNombres.php" class="nav-link">
               <i class="nav-icon fa-solid fa-pencil"></i>
