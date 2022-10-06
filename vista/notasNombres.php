@@ -34,7 +34,7 @@
             <div class="row justify-content-center">
                 <div class="col mb-2 mr-2 ml-2">
                     <div class="row fondoTitulo fw-bolder">Hombres</div>
-                    <div class="row">Adegón, Adrael, Ágonad, Alaron, Aldoril, Aliaudo, Alíaron, Amónanon, Ancíoro, Anganamón, Angítaro, Anjiro, Anteo, Aquireno, Ardon, Ariovico, Asaro, Aspar, Audovar, Auldar, Baran, Belhar, Belisario, Beltrán, Beltzar, Benisando, Berenal, Bernán, Calasio, Calisto, Daiosan, Dandelion, Daron, Dejaniro, Dusio, Edred, Egerio, Elmiro, Erendiro, Esar, Eurico, Evilasio, Evodio, Ezarel, Ezario, Falathuldr, Faltzur, Farsario, Felonán, Gheryon, Gheyron, Glatian, Gradilva, Honán, Honorio, Isilmo, Jaris, Jiledín, Julon, Jumonildo, Ladil, Lajhurit, Lerion, Lirando, Mancíalo, Mandolion, Menteo, Nemoroso, Nicanor, Nirio, Nirono, Olfiro, Olmeo, Pármeno, Pelantaro, Pelton, Perion, Peteleo, Prosaro, Pythion, Renaíldo, Rindoril, Ruanarion, Rurio, Sadeil, Sandarion, Sarisio, Sederón, Sempronio, Senon, Silagico, Sutaro, Taldeo, Teyron, Ulindor, Valniro, Valtario, Veríaco, Vermelio, Yadiro, Zewion, Hermanos Zural Zular</div>
+                    <div class="row">Acamante, Adalberón, Adegón, Adrael, Ágonad, Alaron, Aldoril, Aliaudo, Alíaron, Amónanon, Ancíoro, Anganamón, Angítaro, Anjiro, Anteo, Aquireno, Ardon, Ariovico, Asaro, Aspar, Audovar, Auldar, Baran, Belhar, Belisario, Beltrán, Beltzar, Benisando, Berenal, Bernán, Calasio, Calisto, Daiosan, Dandelion, Daron, Dejaniro, Dusio, Edred, Egerio, Elmiro, Erendiro, Esar, Eurico, Evilasio, Evodio, Ezarel, Ezario, Falathuldr, Faltzur, Farsario, Felonán, Gheryon, Gheyron, Glatian, Gradilva, Honán, Honorio, Isilmo, Jaris, Jiledín, Julon, Jumonildo, Ladil, Lajhurit, Lerion, Lirando, Mancíalo, Mandolion, Menteo, Nemoroso, Nicanor, Nirio, Nirono, Olfiro, Olmeo, Pármeno, Pelantaro, Pelton, Pentaúl, Perion, Peteleo, Prosaro, Pythion, Renaíldo, Rindoril, Ruanarion, Rurio, Sadeil, Sandarion, Sarisio, Sederón, Sempronio, Senon, Silagico, Sutaro, Tailún, Taldeo, Teyron, Ulindor, Valniro, Valtario, Veríaco, Vermelio, Yadiro, Zewion, Hermanos Zural Zular</div>
                 </div>
                 <div class="col mb-2 mr-2 ml-2">
                     <div class="row fondoTitulo fw-bolder">Mujeres</div>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="col mb-2 mr-2 ml-2">
                     <div class="row fondoTitulo fw-bolder">Lugares</div>
-                    <div class="row"> Agoron, Agrinion, Aquelion, Aralar, Bilara, Joya de Catán, Reino de Domsoncad, Morandil, Noviercas, Oleron, Omeñaca, *Onneca, Tadalia, Neustria, Monte Yill, mar de arsis, Landorion, Dimaria, Folerno, Gotara, Gozaria, Nabadasia, Pleshyza, Uctael, Reino de Sunium Dum</div>
+                    <div class="row"> Agoron, Agrinion, Aquelion, Aralar, Aridán, Betulia, Bilara, Joya de Catán, Reino de Domsoncad, Morandil, Noviercas, Oleron, Omeñaca, *Onneca, Tadalia, Neustria, Monte Yill, mar de arsis, Landorion, Dimaria, Folerno, Gotara, Gozaria, Nabadasia, Pleshyza, Uctael, Reino de Sunium Dum</div>
                 </div>
                 <div class="col mb-2 mr-2 ml-2">
                     <div class="row fondoTitulo fw-bolder">Torres de magia (13)</div>
@@ -64,7 +64,7 @@
             <div class="row">
                 <div class="col mb-2 mr-2 ml-2">
                     <div class="row fondoTitulo fw-bolder">Sin decidir</div>
-                    <div class="row">Acrospar, Aharion, Aldryth, Algenion, Alhofen, Alodo, Amarigesa, Andoreova, Andorin, Anglería, Antusa, Arian, Arivor, Aterlan, Aurarmel, Ayeron, Azuairo, Azura, Benanze, Cendrillion, Cleotardo, Delancia, Duada, Eluan, Euderion, Eudibane, Garada, Gasada, Glairen fuyl, Jhasarhyas, Lyjoni, Tel Hazor, Tolwell, Rihot, Meliccis, Ryanne, Jazia, Daz eltghur, Iskar, Liusaidh, Cenaísin, Anaguil, Faladhell, Lorithon, Sharania, Incanan, Notalión, Sinoel, Oramas, Penilval, Nergala, Espisas, Astarion, Nedar, Driatera, Iurifea, Itira, Sedoragania, talagurio, serila, Sabriel, Vlorien</div>
+                    <div class="row">Acrospar, Aharion, Aldryth, Algenion, Alhofen, Alodo, Amarigesa, Andoreova, Andorin, Anglería, Antusa, Arian, Arivor, Aterlan, Aurarmel, Ayeron, Azuairo, Azura, Benanze, Cendrillion, Cleotardo, Delancia, Duada, Eluan, Esdrelón, Euderion, Eudibane, Garada, Gasada, Glairen fuyl, Jhasarhyas, Lyjoni, Tel Hazor, Tolwell, Rihot, Meliccis, Ryanne, Jazia, Daz eltghur, Iskar, Liusaidh, Cenaísin, Anaguil, Faladhell, Lorithon, Sharania, Incanan, Notalión, Sinoel, Oramas, Penilval, Nergala, Espisas, Astarion, Nedar, Driatera, Iurifea, Itira, Sedoragania, talagurio, serila, Sabriel, Vlorien</div>
                 </div>
                 <div class="col mb-2 mr-2 ml-2">
                     <div class="row fondoTitulo fw-bolder">Otros</div>
